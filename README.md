@@ -1,3 +1,6 @@
+## NOTE: This is a fork of [gojenkins](https://github.com/bndr/gojenkins)  
+
+
 # Jenkins API Client for Go
 
 [![GoDoc](https://godoc.org/github.com/bndr/gojenkins?status.svg)](https://godoc.org/github.com/bndr/gojenkins)

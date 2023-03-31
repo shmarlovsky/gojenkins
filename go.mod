@@ -1,4 +1,4 @@
-module github.com/bndr/gojenkins
+module github.com/shmarlovsky/gojenkins-fork
 
 go 1.17
 
