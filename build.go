@@ -158,7 +158,7 @@ type BuildResponse struct {
 		Revisions []struct {
 			Module   string
 			Revision int
-		} `json:"revision"`
+		} `json:"revisions"`
 	} `json:"changeSets"`
 	Culprits          []Culprit   `json:"culprits"`
 	Description       interface{} `json:"description"`
@@ -205,6 +205,7 @@ func (b *Build) GetUrl() string {
 func (b *Build) GetBuildNumber() int64 {
 	return b.Raw.Number
 }
+
 func (b *Build) GetResult() string {
 	return b.Raw.Result
 }
@@ -417,7 +418,6 @@ func (b *Build) GetMatrixRuns(ctx context.Context) ([]*Build, error) {
 }
 
 func (b *Build) GetResultSet(ctx context.Context) (*TestResult, error) {
-
 	url := b.Base + "/testReport"
 	var report TestResult
 
@@ -427,7 +427,6 @@ func (b *Build) GetResultSet(ctx context.Context) (*TestResult, error) {
 	}
 
 	return &report, nil
-
 }
 
 func (b *Build) GetTimestamp() time.Time {
