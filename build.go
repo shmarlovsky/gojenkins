@@ -134,7 +134,7 @@ type BuildResponse struct {
 		Revisions []struct {
 			Module   string
 			Revision int
-		} `json:"revision"`
+		} `json:"revisions"`
 	} `json:"changeSet"`
 	ChangeSets []struct {
 		Items []struct {
